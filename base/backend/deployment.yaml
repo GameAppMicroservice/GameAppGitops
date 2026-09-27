@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gameapp-backend
+  template:
+    metadata:
+      labels:
+        app: gameapp-backend
+    spec:
+      containers:
+        - name: backend
+          image: manojkrishnappa/gameappbackend:e556d843b887e16cc96030a281461ca3b424136c
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: gameapp-rds
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 15
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
