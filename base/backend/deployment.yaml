@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: manojkrishnappa/gameappbackend:e556d843b887e16cc96030a281461ca3b424136c
+          image: manojkrishnappa/gameappbackend:099303a38452e21ed4fc34a336b7231e4a1fb0f2
           ports:
             - containerPort: 8080
           # envFrom:
