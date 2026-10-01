@@ -17,9 +17,9 @@ spec:
           image: manojkrishnappa/gameappbackend:e556d843b887e16cc96030a281461ca3b424136c
           ports:
             - containerPort: 8080
-          envFrom:
-            - secretRef:
-                name: gameapp-rds
+          # envFrom:
+          #   - secretRef:
+          #       name: gameapp-rds
           readinessProbe:
             tcpSocket:
               port: 8080

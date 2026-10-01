@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/your-org/gameapp-frontend:latest
+          image: manojkrishnappa/gameappfrontend:3695a5d371a7737cba7564c568f80d914480e4a0
           ports:
             - containerPort: 80
           readinessProbe:
