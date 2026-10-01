@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: manojkrishnappa/gameappfrontend:3695a5d371a7737cba7564c568f80d914480e4a0
+          image: manojkrishnappa/gameappfrontend:b17c216c19f579aeb33f9bfbb779022911b6857a
           ports:
             - containerPort: 80
           readinessProbe:
