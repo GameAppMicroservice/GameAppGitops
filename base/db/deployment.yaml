@@ -21,7 +21,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: server
-        image: manojkrishnappa/gameappdb:79d80b7dab0ba69afa0576c3600ebceef876794e
+        image: manojkrishnappa/gameappdb:49c703b473eaa374fca673ad58b41f2eb641c238
         ports:
         - containerPort: 8081
         securityContext:
